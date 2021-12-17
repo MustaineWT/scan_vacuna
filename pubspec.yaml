@@ -1,0 +1,33 @@
+name: vac_card
+description: A new Flutter project.
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.15.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  cawaf_api:
+    git:
+      url: git@github.com:MustaineWT/cawaf_services_api.git
+      path: ./cawaf_api
+  provider: ^6.0.1
+  get_it: ^7.2.0
+  dartz: ^0.10.0
+  equatable: ^2.0.2
+  logger: ^1.0.0
+  qr_code_scanner: ^0.6.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^1.0.0
+
+flutter:
+  uses-material-design: true
