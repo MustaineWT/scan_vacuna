@@ -6,7 +6,7 @@ import 'package:provider/single_child_widget.dart';
 import 'app/core/routes/routemanager.dart';
 import 'app/core/utils/context_service.dart';
 import 'app/pages/home/view/view.dart';
-import 'app/pages/home/vm/home_vm.dart';
+import 'app/pages/home/view/home_vm.dart';
 import 'injection_container.dart';
 
 class MyApp extends StatefulWidget {

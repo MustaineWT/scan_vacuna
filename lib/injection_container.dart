@@ -3,7 +3,8 @@ import 'package:get_it/get_it.dart';
 
 import 'app/core/utils/context_service.dart';
 import 'app/data/data_user/data_user.dart';
-import 'app/pages/home/vm/home_vm.dart';
+import 'app/pages/detail/view/view.dart';
+import 'app/pages/home/view/view.dart';
 
 final GetIt sl = GetIt.instance;
 
@@ -18,6 +19,7 @@ Future<void> initDependency() async {
   sl
     //ViewModels
     ..registerFactory(() => HomeViewModel())
+    ..registerFactory(() => DetailViewModel())
     //Repositories
     ..registerLazySingleton<RemoteDataUserRepository>(
         () => RemoteDataUserApi(sl()))
