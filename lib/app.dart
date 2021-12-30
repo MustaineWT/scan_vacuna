@@ -5,8 +5,7 @@ import 'package:provider/single_child_widget.dart';
 
 import 'app/core/routes/routemanager.dart';
 import 'app/core/utils/context_service.dart';
-import 'app/pages/home/view/view.dart';
-import 'app/pages/home/view/home_vm.dart';
+import 'app/pages/splash/view.dart';
 import 'injection_container.dart';
 
 class MyApp extends StatefulWidget {
@@ -35,21 +34,21 @@ class _MyAppState extends State<MyApp> {
     ]);
     return MultiProvider(
       providers: <SingleChildWidget>[
-        ChangeNotifierProvider<HomeViewModel>(
-          create: (_) => HomeViewModel(),
+        ChangeNotifierProvider<SplashViewModel>(
+          create: (_) => SplashViewModel(),
         ),
       ],
       child: MaterialApp(
         navigatorKey: sl<ContextService>().navigatorKey,
         debugShowCheckedModeBanner: widget.banner,
-        title: 'Cawaf',
+        title: 'Vacuna Scan',
         theme: ThemeData(
             primarySwatch: Colors.blue,
             splashColor: Colors.white,
             //brightness: Brightness.dark,
             canvasColor: Colors.blue,
             visualDensity: VisualDensity.adaptivePlatformDensity),
-        home: const HomePage(),
+        home: const SplashPage(),
         onGenerateRoute: RouteManager.generateRoute,
         //initialRoute: RouteManager.initial,
       ),

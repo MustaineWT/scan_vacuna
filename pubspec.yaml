@@ -3,7 +3,7 @@ description: A new Flutter project.
 
 publish_to: "none"
 
-version: 1.0.0+1
+version: 1.0.2+2
 
 environment:
   sdk: ">=2.15.0 <3.0.0"
@@ -22,12 +22,26 @@ dependencies:
   equatable: ^2.0.2
   logger: ^1.0.0
   qr_code_scanner: ^0.6.1
+  shared_preferences: ^2.0.9
+  google_sign_in: ^5.2.1
+  url_launcher: ^6.0.17
+  geolocator: ^8.0.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: "^0.9.2"
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/logo.png"
 
   flutter_lints: ^1.0.0
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - google.png
+    - profile.png

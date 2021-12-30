@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "915632378687",
+    "project_id": "vacuna-card",
+    "storage_bucket": "vacuna-card.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:915632378687:android:bd9943deaf7c0aef89398a",
+        "android_client_info": {
+          "package_name": "com.simplexgo.vac_card"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "915632378687-nkpaqrm54h2qk4oo9305tt1n3hsuqcj2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.simplexgo.vac_card",
+            "certificate_hash": "651848aad50ade730ffdc2d551f78551048b6605"
+          }
+        },
+        {
+          "client_id": "915632378687-gtgt0q702qsb33hguot2gtt1a8vi4p93.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPLf6RsQm2Gh7uyZ_38XoPYMp8oQxbScI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "915632378687-gtgt0q702qsb33hguot2gtt1a8vi4p93.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

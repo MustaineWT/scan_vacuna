@@ -1,8 +1,7 @@
 enum DataUserStatus {
-  unknown,
-  completed,
-  notFound,
-  pending,
+  success,
   error,
   networkError,
+  accessDenied,
+  unknownError,
 }

@@ -1,13 +1,25 @@
 import 'package:vac_card/app/core/utils/status_notifier.dart';
-import 'package:vac_card/app/data/data_user/data_user.dart';
-import 'package:vac_card/app/data/data_user/models/user_data.dart';
+import 'package:vac_card/app/data/authentication/services/authentication.dart';
 import 'package:vac_card/injection_container.dart';
 
 class HomeViewModel extends StatusNotifier {
-  UserDataModel? userDataModel;
-  Future<UserDataModel> formatDataResponse(String? scanData) async {
-    String? texto = scanData?.substring(scanData.indexOf('Tk=') + 3);
-    userDataModel = await sl<RemoteDataUserRepository>().getDataUser(texto!);
-    return userDataModel!;
+  HomeViewModel() {
+    initUserData();
+  }
+  String? _name;
+  String? _email;
+  String? get name => _name;
+  String? get email => _email;
+  LoginResponse? _loginResponse;
+
+  void initUserData() async {
+    _loginResponse = await sl<LocalAuthenticationRepository>().getSessionData();
+    _name = _loginResponse?.user!.name;
+    _email = _loginResponse?.user!.email;
+    notifyListeners();
+  }
+
+  void logOff() async {
+    await sl<LocalAuthenticationRepository>().clearSession();
   }
 }

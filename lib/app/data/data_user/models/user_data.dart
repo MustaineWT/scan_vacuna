@@ -1,21 +1,21 @@
 class UserDataModel {
   UserDataModel({
-    required this.responsetId,
-    required this.messageId,
-    required this.actions,
-    required this.state,
-    required this.isNew,
-    required this.success,
-    required this.data,
+    this.responsetId,
+    this.messageId,
+    this.actions,
+    this.state,
+    this.isNew,
+    this.success,
+    this.datas,
   });
 
-  int responsetId;
-  int messageId;
-  String actions;
-  String state;
-  bool isNew;
-  bool success;
-  Data data;
+  int? responsetId;
+  int? messageId;
+  String? actions;
+  String? state;
+  bool? isNew;
+  bool? success;
+  Data? datas;
 
   UserDataModel copyWith({
     int? responsetId,
@@ -24,7 +24,7 @@ class UserDataModel {
     String? state,
     bool? isNew,
     bool? success,
-    Data? data,
+    Data? datas,
   }) =>
       UserDataModel(
         responsetId: responsetId ?? this.responsetId,
@@ -33,7 +33,7 @@ class UserDataModel {
         state: state ?? this.state,
         isNew: isNew ?? this.isNew,
         success: success ?? this.success,
-        data: data ?? this.data,
+        datas: datas ?? this.datas,
       );
 
   factory UserDataModel.fromJson(Map<String, dynamic> json) => UserDataModel(
@@ -43,7 +43,7 @@ class UserDataModel {
         state: json["State"],
         isNew: json["IsNew"],
         success: json["Success"],
-        data: Data.fromJson(json["Data"]),
+        datas: Data.fromJson(json["Data"]),
       );
 
   Map<String, dynamic> toJson() => {
@@ -53,46 +53,46 @@ class UserDataModel {
         "State": state,
         "IsNew": isNew,
         "Success": success,
-        "Data": data.toJson(),
+        "Data": datas!.toJson(),
       };
 }
 
 class Data {
   Data({
-    required this.fecConsulta,
-    required this.fecGenerada,
-    required this.fecExpira,
-    required this.idPersona,
-    required this.nombres,
-    required this.apelPaterno,
-    required this.apelMaterno,
-    required this.fechNacimiento,
-    required this.idGenero,
-    required this.numDoc,
-    required this.idTipoDoc,
-    required this.descTipoDoc,
-    required this.idPais,
-    required this.descPais,
-    required this.vacunaDosisAplico,
-    required this.vacunas,
+    this.fecConsulta,
+    this.fecGenerada,
+    this.fecExpira,
+    this.idPersona,
+    this.nombres,
+    this.apelPaterno,
+    this.apelMaterno,
+    this.fechNacimiento,
+    this.idGenero,
+    this.numDoc,
+    this.idTipoDoc,
+    this.descTipoDoc,
+    this.idPais,
+    this.descPais,
+    this.vacunaDosisAplico,
+    this.vacunas,
   });
 
-  String fecConsulta;
-  String fecGenerada;
-  String fecExpira;
-  int idPersona;
-  String nombres;
-  String apelPaterno;
-  String apelMaterno;
-  String fechNacimiento;
-  String idGenero;
-  String numDoc;
-  int idTipoDoc;
-  String descTipoDoc;
-  String idPais;
-  String descPais;
-  String vacunaDosisAplico;
-  List<Vacuna> vacunas;
+  String? fecConsulta;
+  String? fecGenerada;
+  String? fecExpira;
+  int? idPersona;
+  String? nombres;
+  String? apelPaterno;
+  String? apelMaterno;
+  String? fechNacimiento;
+  String? idGenero;
+  String? numDoc;
+  int? idTipoDoc;
+  String? descTipoDoc;
+  String? idPais;
+  String? descPais;
+  String? vacunaDosisAplico;
+  List<Vacuna>? vacunas;
 
   Data copyWith({
     String? fecConsulta,
@@ -167,38 +167,38 @@ class Data {
         "IdPais": idPais,
         "DescPais": descPais,
         "VacunaDosisAplico": vacunaDosisAplico,
-        "Vacunas": List<dynamic>.from(vacunas.map((x) => x.toJson())),
+        "Vacunas": List<dynamic>.from(vacunas!.map((x) => x.toJson())),
       };
 }
 
 class Vacuna {
   Vacuna({
-    required this.idVacuna,
-    required this.descCodigo,
-    required this.descVacuna,
-    required this.idDosis,
-    required this.nroDosis,
-    required this.descDosis,
-    required this.vacunaLote,
-    required this.vacunaFabricante,
-    required this.idEstablecimiento,
-    required this.codunico,
-    required this.estNombre,
-    required this.vacunaFecha,
+    this.idVacuna,
+    this.descCodigo,
+    this.descVacuna,
+    this.idDosis,
+    this.nroDosis,
+    this.descDosis,
+    this.vacunaLote,
+    this.vacunaFabricante,
+    this.idEstablecimiento,
+    this.codunico,
+    this.estNombre,
+    this.vacunaFecha,
   });
 
-  int idVacuna;
-  String descCodigo;
-  String descVacuna;
-  String idDosis;
-  String nroDosis;
-  String descDosis;
-  String vacunaLote;
-  String vacunaFabricante;
-  int idEstablecimiento;
-  int codunico;
-  String estNombre;
-  String vacunaFecha;
+  int? idVacuna;
+  String? descCodigo;
+  String? descVacuna;
+  String? idDosis;
+  String? nroDosis;
+  String? descDosis;
+  String? vacunaLote;
+  String? vacunaFabricante;
+  int? idEstablecimiento;
+  int? codunico;
+  String? estNombre;
+  String? vacunaFecha;
 
   Vacuna copyWith({
     int? idVacuna,

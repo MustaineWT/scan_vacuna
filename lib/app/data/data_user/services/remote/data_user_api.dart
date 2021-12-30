@@ -12,17 +12,19 @@ class RemoteDataUserApi implements RemoteDataUserRepository {
   Future<UserDataModel?> getDataUser(
     String token,
   ) async {
-    HttpResult<UserDataModel> response = await _http.request(
-      '/data-qr',
-      method: HttpMethod.post,
-      body: {
-        'Id': token,
-      },
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      parser: (dynamic data) => UserDataModel.fromJson(data),
-    );
+    HttpResult<UserDataModel> response = await _http
+        .request(
+          '/data-qr',
+          method: HttpMethod.post,
+          body: {
+            'Id': token,
+          },
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          parser: (dynamic data) => UserDataModel.fromJson(data),
+        )
+        .timeout(Duration(seconds: 10));
     return response.data;
   }
 }

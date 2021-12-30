@@ -1,4 +1,4 @@
-package com.example.vac_card
+package com.simplexgo.vac_card
 
 import io.flutter.embedding.android.FlutterActivity
 

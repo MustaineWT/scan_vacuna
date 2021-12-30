@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:vac_card/app/pages/detail/view/detail_page.dart';
-import 'package:vac_card/injection_container.dart';
-
-import '../../pages/home/view/view.dart';
+import 'package:vac_card/app/pages/home/view.dart';
+import 'package:vac_card/app/pages/login/view.dart';
+import 'package:vac_card/app/pages/scan/view.dart';
+import 'package:vac_card/app/pages/splash/view.dart';
 
 part 'app_routes.dart';
 
@@ -14,8 +14,13 @@ class RouteManager {
     switch (settings.name) {
       case AppRoutes.home:
         return MaterialPageRoute<dynamic>(builder: (_) => const HomePage());
-      /* case AppRoutes.detail:
-        return MaterialPageRoute<dynamic>(builder: (_) => DetailPage()); */
+      case AppRoutes.scan:
+        return MaterialPageRoute<dynamic>(builder: (_) => const ScanPage());
+      case AppRoutes.login:
+        return MaterialPageRoute<dynamic>(builder: (_) => const LoginPage());
+      case AppRoutes.splash:
+        return MaterialPageRoute<dynamic>(builder: (_) => const SplashPage());
+
       default:
         return MaterialPageRoute<dynamic>(
           builder: (_) => Scaffold(
