@@ -21,6 +21,7 @@ class RemoteDataUserApi implements RemoteDataUserRepository {
           },
           headers: {
             "Content-Type": "application/x-www-form-urlencoded",
+            "Authorization": "Bearer $token",
           },
           parser: (dynamic data) => UserDataModel.fromJson(data),
         )
